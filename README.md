@@ -4,7 +4,7 @@ Allows displaying of 500 characters long text message that is stored in non-vola
 
 To upload text for display use putty terminal and connect to virtual Serial Port of ATTINY85 Digispark ( /ttyACM0 on linux or COMxx on Windows ).
 Type the text using keyboard and press ENTER. It will be stored in EEPROM memory of ARDUINO.
-After ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB. The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers) - http://digistump.com/wiki/digispark/tutorials/digicdc.
+After ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB. The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers : http://digistump.com/board/index.php?topic=2321.15) - http://digistump.com/wiki/digispark/tutorials/digicdc.
 
 The MAX 7219 modules should be connected in daisy chain. The code supports up to 30 MAX 7219 modules connected in daisy chain but remember that your USB 5V has to be strong enough to power such number of LED displays.  
 
