@@ -6,7 +6,7 @@ To upload text for display use Putty terminal (or other serial port terminal) an
 Type the text using keyboard and press ENTER. It will be stored in EEPROM memory of ARDUINO.
 After ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB. The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers : http://digistump.com/board/index.php?topic=2321.15) - http://digistump.com/wiki/digispark/tutorials/digicdc.
 
-The MAX 7219 modules should be connected in daisy chain. The code supports up to 30 MAX 7219 modules connected in daisy chain but remember that your USB 5V has to be strong enough to power such number of LED displays.  Please declare number of modules used in the code within 
+The MAX 7219 modules should be connected in daisy chain. The code supports up to 12 MAX 7219 modules connected in daisy chain but remember that your USB 5V has to be strong enough to power such number of LED displays.  Please declare number of modules used in the code within 
 #define MODULESNUMBER           <my-number-of-MAX-7219-modules>
 
 connections :
