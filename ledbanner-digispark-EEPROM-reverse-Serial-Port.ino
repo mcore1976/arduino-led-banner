@@ -564,7 +564,7 @@ void setup() {
      MAX7219_initN(MODULESNUMBER);
 
      // initialize Serial port library 
-     Serial.begin(9600);
+     mySerial.begin(9600);
      mySerial.println("Please enter text for LED BANNER (<ENTER> for end) :  ");
 
 }
