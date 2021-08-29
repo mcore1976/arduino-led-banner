@@ -32,7 +32,7 @@ USB version
  
  
  
-
+You can see how the device works in this video :  https://youtu.be/sqZCjQiLk7E 
  
 
 
