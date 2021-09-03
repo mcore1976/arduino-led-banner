@@ -10,7 +10,7 @@
 // max text size is up to 500 characters
 //
 // connect FTDI232 to Digispark pins 3 (TX from FTDI),
-// pin 2 (RX from FTDI), connect GND 
+// pin 4 (RX from FTDI), connect GND 
 // *****************************************************************************
 
 #include <stdint.h>
@@ -476,6 +476,7 @@ MAX7219_initN(uint8_t N)
         for (i=0; i<N; i++)
         {   
            commands[(i*2)] = MAX7219_REG_INTENSITY;
+           // here you set Intensity of LED display, 8 is the max
            commands[(i*2)+1] = 8;
         };
         MAX7219_sendN(N, commands);
