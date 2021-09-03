@@ -449,6 +449,7 @@ MAX7219_initN(uint8_t N)
         for (i=0; i<N; i++)
         {   
            commands[(i*2)] = MAX7219_REG_INTENSITY;
+           // here you set Intensity of LED display, 8 is the max
            commands[(i*2)+1] = 8;
         };
         MAX7219_sendN(N, commands);
@@ -478,9 +479,9 @@ void loop() {
   // put your main code here, to run repeatedly:
      uint8_t  row, i, j, k;                   // for bitmap manipulation
      uint8_t  letter;                         // current character taken from defined text
-     uint16_t offset;                         // offset for current character in flash memory
+     uint16_t offset;                         // offset for current character in  memory
      uint16_t offset2;                        // offset for columns 
-     uint16_t offset3;                        // location of current char from USB reading
+     uint16_t offset3;                        // location of current char from USB reading buffer
      uint16_t textsize;                       // size of text in USB characters buffer
      uint16_t currentstart;                   // offset for current character in flash memory of the chip
      uint8_t  commands[MODULESNUMBER * 2];
