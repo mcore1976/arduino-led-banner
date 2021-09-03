@@ -27,7 +27,7 @@
 
 // declare number of letters in scrolled text here. Max is 4096 letters
 #define NUMCHARS          80
-// declare number of daisy chained MAX7219 modules here. Max is 30 modules here
+// declare number of daisy chained MAX7219 modules here. Max is 6 modules here
 // but dependent on free RAM in ATTINY 85
 #define MODULESNUMBER           6
 // calculation of buffer length needed for displaying, because every font letter is 8 bytes long
