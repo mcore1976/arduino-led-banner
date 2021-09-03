@@ -4,8 +4,12 @@
 // (c) Adam Loboda '2020 
 // find me at adam.loboda@wp.pl
 //
-// this version takes characters from USB and stores into RAM buffer
-// text can be only 80 characters long due to RAM shortage
+// this initial version takes characters from USB and stores into RAM buffer
+// text can be only 80 characters long due to RAM shortage because of
+// DigiCDC library taking huge portion of memory
+// this version it is useful for News Ticker like copying 
+// characters by 'echo' command in Linux  directly to LED display :
+// f.ex. echo -ne 'this is text message\00d' > /dev/ttyACM0
 // ********************************************************************
 
 #include <stdint.h>
