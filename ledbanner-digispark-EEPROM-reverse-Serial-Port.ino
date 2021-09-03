@@ -12,7 +12,7 @@
 // the message is scrolled from RIGHT to LEFT direction (arabic version)
 //
 // connect FTDI232 to Digispark pins 3 (TX from FTDI),
-// pin 2 (RX from FTDI), connect GND from Digispark to FTDI232
+// pin 4 (RX from FTDI), connect GND from Digispark to FTDI232
 // *****************************************************************************
 
 #include <stdint.h>
@@ -559,6 +559,7 @@ MAX7219_initN(uint8_t N)
         for (i=0; i<N; i++)
         {   
            commands[(i*2)] = MAX7219_REG_INTENSITY;
+           // here you set intensity of LED, 8 is the max
            commands[(i*2)+1] = 8;
         };
         MAX7219_sendN(N, commands);
