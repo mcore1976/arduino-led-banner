@@ -10,7 +10,7 @@
 // not exhausting Write  cycles of EEPROM in ATTINY85 chip)
 // This version is very useful for News Ticker like copying 
 // characters by 'echo' command in Linux  directly to LED display :
-// f.ex. echo -ne 'this is text message\00d' > /dev/ttyACM0
+// f.ex. echo -ne 'this is text message\n' > /dev/ttyACM0
 // ********************************************************************
 
 #include <stdint.h>
