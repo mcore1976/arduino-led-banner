@@ -12,11 +12,17 @@ For more frequent message uploading there is a version that stores text to be di
 
 In RAM version - you can connect LED banner to Raspberry Pi  and upload new text message from Raspberry every few seconds to RAM of Digispark :
 - set the virtual USB to serial port speed to 9600 baud
+- 
 chmod o+rw /dev/ttyUSB0
+
 stty /dev/ttyUSB0 9600
+
 or
+
 stty -F /dev/ttyUSB0 9600 raw -echo -echoe -echok -echoctl -echoke
+
 - send the message to be displayed on LED banner over serial port, ending with <CR> character ASCII 13
+ 
  echo -ne 'One line 80 characters message for LED display! \n' > /dev/ttyUSB0
 
 The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers : http://digistump.com/board/index.php?topic=2321.15) - http://digistump.com/wiki/digispark/tutorials/digicdc.
