@@ -6,14 +6,17 @@ To upload text for display use Putty terminal (or other serial port terminal) an
 You can also use FTDI232 USB-to-Serial converter and connect to ports of DIGISPARK D3, D4, GND if using SoftSerial version.
 
 Type the text using keyboard and press ENTER. It will be stored in EEPROM memory of ARDUINO.
-After ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB / virtual Serial Port. 
+After ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB / virtual Serial Port.
+
 Also there is a version that stores text to be displayed into RAM memory of ATTINY. It allows unlimited cycles of writes so it can be used for automatic batched display of some news etc. 
 In RAM version - you can connect LED banner to Raspberry Pi  and upload new text message from Raspberry every few seconds to RAM of Digispark :
 - set the virtual USB to serial port speed to 9600 baud
-stty 9600 < /dev/ttyUSB0
-stty 9600 -F /dev/ttyUSB0
+chmod o+rw /dev/ttyUSB0
+stty /dev/ttyUSB0 9600
+or
+stty -F /dev/ttyUSB0 9600 raw -echo -echoe -echok -echoctl -echoke
 - send the message to be displayed on LED banner over serial port, ending with <CR> character ASCII 13
- echo -ne 'One line 80 characters message for LED display!\00d' > /dev/ttyUSB0
+ echo -ne 'One line 80 characters message for LED display! \n' > /dev/ttyUSB0
 
 The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers : http://digistump.com/board/index.php?topic=2321.15) - http://digistump.com/wiki/digispark/tutorials/digicdc.
 
