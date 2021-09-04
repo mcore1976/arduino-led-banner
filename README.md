@@ -1,6 +1,7 @@
 # arduino-led-banner
 This is nice and simple LED BANNER constructed of Arduino Digispark and Daisy-chained set of MAX7219 LED 8x8 matrix. 
-Displays up to 500 characters long scrolling text message that is stored within non-volatile EEPROM memory of the chip (!0000+ writes possible).
+Displays up to 500 characters long scrolling text message that is stored within non-volatile EEPROM memory of the chip (!0000+ writes possible) - "static mode" 
+or in second mode when text is stored in RAM - message can be 80 characters long and frequently changing (every few second) - this is "news ticker mode"
 
 To upload text for display use Putty terminal (or other serial port terminal) and connect to virtual Serial Port of ATTINY85 Digispark ( /ttyACM0 on linux or COMxx on Windows ).
 You can also use FTDI232 USB-to-Serial converter and connect to ports of DIGISPARK D3, D4, GND if using SoftSerial version.
