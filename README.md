@@ -9,6 +9,7 @@ You can also use FTDI232 USB-to-Serial converter and connect to ports of DIGISPA
 Type the text using keyboard and press ENTER. It will be stored in EEPROM memory or RAM memory of ARDUINO (depending on INO script selected).
 In EEPROM version after ARDUINO disconnected from the PC and connected to USB PowerBank, the device will display scrolling text uploaded from USB / virtual Serial Port.
 For more frequent message uploading there is a version that stores text to be displayed into RAM memory of ATTINY. It allows unlimited cycles of writes so it can be used for automatic batched display of some news etc. 
+
 In RAM version - you can connect LED banner to Raspberry Pi  and upload new text message from Raspberry every few seconds to RAM of Digispark :
 - set the virtual USB to serial port speed to 9600 baud
 chmod o+rw /dev/ttyUSB0
