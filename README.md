@@ -27,7 +27,9 @@ stty -F /dev/ttyUSB0 9600 raw -echo -echoe -echok -echoctl -echoke
 
 The code uses DigiCDC USB library and you need to have necessary driver in your operationg system (Linux has it built in, for Windows you need to download Digispark drivers : http://digistump.com/board/index.php?topic=2321.15) - http://digistump.com/wiki/digispark/tutorials/digicdc.
 
-The MAX 7219 modules should be connected in daisy chain. The code supports up to 12 MAX 7219 modules connected in daisy chain but remember that your USB 5V has to be strong enough to power such number of LED displays.  Please declare number of modules used in the code within 
+ For Windows 10 (because of USB drivers changed in this OS in comparision to Windows 7)  - you need specialized driver that can be used only in testmode and requires uploading certificate https://github.com/protaskin/LowCDC-Win10x64
+
+The MAX 7219 modules should be connected in daisy chain. The code supports up to 12 MAX 7219 modules connected in daisy chain but remember that your USB 5V has to be strong enough to power such number of LED displays. You may  declare number of modules used in the code within 
 #define MODULESNUMBER           <my-number-of-MAX-7219-modules>
  
  Both types of scrolling are available : RIGHT to LEFT (for Roman characters)  , LEFT to RIGHT (for Arabic characters). Choose proper source code INO version.
