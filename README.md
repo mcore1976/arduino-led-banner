@@ -12,7 +12,7 @@ For more frequent message uploading there is a version that stores text to be di
 
 In RAM version - you can connect LED banner to Raspberry Pi  and upload new text message from Raspberry every few seconds to RAM of Digispark :
 - set the virtual USB to serial port speed to 9600 baud
-- 
+
 chmod o+rw /dev/ttyUSB0
 
 stty /dev/ttyUSB0 9600
